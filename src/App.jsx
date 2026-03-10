@@ -94,7 +94,7 @@ function AppShell() {
               <div className="demo-banner-copy">
                 <span className="demo-pill">Demo</span>
                 <p>
-                  This is a front-end demo of Atelier Noir. All flows, carts and
+                  This is a front-end Demo Shop experience. All flows, carts and
                   logins are for presentation only.
                 </p>
               </div>
@@ -169,8 +169,8 @@ function Navbar() {
     <header className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
       <div className="container nav-inner">
         <Link className="brand" to="/" onClick={closeMenu}>
-          <span className="brand-mark">A</span>
-          <span>Atelier Noir</span>
+          <span className="brand-mark">D</span>
+          <span>Demo Shop</span>
         </Link>
 
         <nav className="nav-links desktop-only">
@@ -280,8 +280,8 @@ function Footer() {
       <div className="container footer-grid">
         <div>
           <div className="brand footer-brand">
-            <span className="brand-mark">A</span>
-            <span>Atelier Noir</span>
+            <span className="brand-mark">D</span>
+            <span>Demo Shop</span>
           </div>
           <p className="muted">
             Premium modern fashion with an editorial ecommerce experience.
@@ -400,7 +400,9 @@ function HomePage({ onQuickView }) {
 
       <section className="marquee-block">
         <div className="marquee-text">
-          ESSENTIALS · OUTERWEAR · FOOTWEAR · STREETWEAR · NEW SEASON ·
+          <span>ESSENTIALS · OUTERWEAR · FOOTWEAR · STREETWEAR · NEW SEASON ·</span>
+          <span>ESSENTIALS · OUTERWEAR · FOOTWEAR · STREETWEAR · NEW SEASON ·</span>
+          <span>ESSENTIALS · OUTERWEAR · FOOTWEAR · STREETWEAR · NEW SEASON ·</span>
         </div>
       </section>
 
@@ -1143,7 +1145,7 @@ function AboutPage() {
           <span className="eyebrow">About</span>
           <h1>Premium fashion, clearer composition, quieter confidence.</h1>
           <p className="muted hero-narrow">
-            Atelier Noir is a fictional brand concept built to show how a modern
+            Demo Shop is a fictional brand concept built to show how a modern
             fashion website can feel editorial without losing ecommerce clarity.
           </p>
         </div>

@@ -355,7 +355,11 @@ button {
   position: sticky;
   top: 0;
   z-index: 60;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.08), rgba(13, 17, 28, 0.98));
+  background: linear-gradient(
+    90deg,
+    rgba(255, 230, 109, 0.18),
+    rgba(255, 230, 109, 0.04)
+  );
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
   backdrop-filter: blur(18px);
 }
@@ -581,6 +585,7 @@ button {
 }
 
 .marquee-text {
+  display: inline-flex;
   white-space: nowrap;
   font-size: clamp(1.4rem, 5vw, 2.7rem);
   line-height: 1;
@@ -590,12 +595,16 @@ button {
   animation: scrollText 18s linear infinite;
 }
 
+.marquee-text span {
+  padding-right: 4rem;
+}
+
 @keyframes scrollText {
   from {
     transform: translateX(0%);
   }
   to {
-    transform: translateX(-25%);
+    transform: translateX(-33.3333%);
   }
 }
 

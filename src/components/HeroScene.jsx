@@ -51,7 +51,7 @@ export function HeroScene() {
             Built for movement.
           </h1>
           <p className="hero-subtitle">
-            Atelier Noir is a cinematic fashion surface for modern ecommerce&mdash;
+            Demo Shop is a cinematic fashion surface for modern ecommerce&mdash;
             oversized typography, calm luxury, and an interface shaped for story.
           </p>
         </motion.div>
@@ -77,7 +77,7 @@ export function HeroScene() {
           transition={{ delay: 0.65, duration: 0.6, ease: "easeOut" }}
         >
           <div className="hero-floating-body">
-            <span className="eyebrow small">Season 01 · Atelier Noir</span>
+            <span className="eyebrow small">Season 01 · Demo Shop</span>
             <p className="muted">
               A directional starter built for fashion launches, quiet luxury brands,
               and editorial-forward ecommerce experiments.
