@@ -163,6 +163,15 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handle);
   }, []);
 
+  useEffect(() => {
+    if (!open) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [open]);
+
   const closeMenu = () => setOpen(false);
 
   return (
@@ -206,9 +215,11 @@ function Navbar() {
         </div>
 
         <button
+          type="button"
           className="mobile-toggle mobile-only"
           onClick={() => setOpen((prev) => !prev)}
-          aria-label="Toggle navigation"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
         >
           {open ? "Close" : "Menu"}
         </button>
@@ -216,8 +227,9 @@ function Navbar() {
 
       <AnimatePresence>
         {open && (
-          <motion.div
+          <motion.nav
             className="mobile-menu mobile-only"
+            aria-label="Mobile navigation"
             initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
@@ -267,7 +279,7 @@ function Navbar() {
                 Sign in
               </NavLink>
             )}
-          </motion.div>
+          </motion.nav>
         )}
       </AnimatePresence>
     </header>
